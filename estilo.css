@@ -7,11 +7,15 @@ html{
     font-size: 62.5%;
 }
 
+:root {
+    --altura-do-header: 4.5rem
+}
+
 body{
 
     font-size: 1.6rem;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(180deg, black, rgb(15, 16, 31));
+    background: linear-gradient(180deg,rgb(6, 6, 66), black);
     height: 100vh;
 }
 
@@ -23,7 +27,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 4.5rem;
+    height: var(--altura-do-header);
     margin: 0 2rem;
     padding: 1rem;
 
@@ -63,8 +67,6 @@ a {
 .menu-mobile.show .menu-hamburguer .three{
     transform: rotate(45deg) translate(0px, 0px);
     background-color: white;
-  
-    
 }
 
 .menu-toggle {
@@ -74,7 +76,7 @@ a {
 .menu-mobile.show .menu-toggle {
     display: block;
     position: fixed;
-    background: linear-gradient(0deg, rgb(15, 16, 31), black);
+    background: linear-gradient(180deg, rgb(15, 16, 31), rgb(0, 0, 0));
     top: 0;
     left: 0;
     height: 100vh;
@@ -84,7 +86,7 @@ a {
 .menu-mobile.show .menu-toggle ul {
   display: grid;
   place-content: center;
-  margin-top: 4.5rem;
+  margin-top: var(--altura-do-header);
   
 }
 .menu-mobile.show .menu-toggle ul li {
@@ -92,7 +94,7 @@ a {
     margin: 1.5rem;    
 }
 .menu-mobile.show .menu-toggle ul li a {
-    display: block;
+    display: inline-block;
     color: white; 
     padding: 1rem;  
     position: relative; 
@@ -105,7 +107,7 @@ a {
     bottom: 0;
     height: 2px;
     width: 0%;
-    background-color:yellow;
+    background-color: yellowgreen;
     transition: width 0.4s;
 }
 .menu-mobile.show .menu-toggle ul li a:hover::after {
