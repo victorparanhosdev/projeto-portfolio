@@ -20,7 +20,8 @@ body{
 }
 
 header { 
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0.35);
+    border-bottom: 0.1rem solid rgba(255, 255, 255, 0.275);
 }
 .container {
     margin: 0 2rem;
@@ -32,6 +33,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     height: var(--altura-do-header);
+    
    
     
 
@@ -46,41 +48,44 @@ a {
 }
 .paranhos {
     font-size: 2rem;
-    color: black;
-    font-weight: 700;
+    color: rgb(204, 204, 204);
+    font-weight: 600;
+ 
 }
 .dev {
     font-weight: 700;
     color: rgb(5, 5, 123);
+    text-shadow: 1px 1px 1px white, -1px 1px 1px white, 1px -1px 1px white, -1px -1px 1px white;
     font-size: 2rem;
 }
 
 .menu-hamburguer {
    cursor: pointer;
    width: 3.2rem;
+  
 }
 .one {
     margin-top: 0.8rem;
 }
 .one, .two, .three {
-    height: 0.3rem;
+    height: 0.1rem;
     width: 100%;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     margin-bottom: 0.8rem;
-    transition: transform 0.4s;
+    transition: transform 0.3s;
 }
 
-.menu-mobile.show .menu-hamburguer .two{
-    opacity: 0;
+
+.menu-mobile.show .menu-hamburguer .one{
+    transform: rotate(-45deg) translate(-7px, 7px);
    
 }
-.menu-mobile.show .menu-hamburguer .one{
-    transform: rotate(-45deg) translate(-16px, 15px);
-    background-color: white;
+.menu-mobile.show .menu-hamburguer .two{
+    display: none;
 }
 .menu-mobile.show .menu-hamburguer .three{
     transform: rotate(45deg) translate(0px, 0px);
-    background-color: white;
+   
 }
 
 .menu-toggle {
@@ -119,7 +124,7 @@ a {
     position: absolute;
     left:0;
     bottom: 0;
-    height: 2px;
+    height: 0.2rem;
     width: 0%;
     background-color: yellowgreen;
     transition: width 0.4s;
