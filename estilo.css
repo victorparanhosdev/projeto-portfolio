@@ -8,7 +8,7 @@ html{
 }
 
 :root {
-    --altura-do-header: 4.5rem
+    --altura-do-header: 7.2rem
 }
 
 body{
@@ -22,14 +22,18 @@ body{
 header { 
     background-color: white;
 }
+.container {
+    margin: 0 2rem;
+    padding: 1rem;
 
+}
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: var(--altura-do-header);
-    margin: 0 2rem;
-    padding: 1rem;
+   
+    
 
 }
 ul {
@@ -40,6 +44,16 @@ a {
     text-decoration: none;
     color: black;
 }
+.paranhos {
+    font-size: 2rem;
+    color: black;
+    font-weight: 700;
+}
+.dev {
+    font-weight: 700;
+    color: rgb(5, 5, 123);
+    font-size: 2rem;
+}
 
 .menu-hamburguer {
    cursor: pointer;
@@ -49,7 +63,7 @@ a {
     margin-top: 0.8rem;
 }
 .one, .two, .three {
-    height: 0.2rem;
+    height: 0.3rem;
     width: 100%;
     background-color: black;
     margin-bottom: 0.8rem;
@@ -61,7 +75,7 @@ a {
    
 }
 .menu-mobile.show .menu-hamburguer .one{
-    transform: rotate(-45deg) translate(-15px, 14px);
+    transform: rotate(-45deg) translate(-16px, 15px);
     background-color: white;
 }
 .menu-mobile.show .menu-hamburguer .three{
