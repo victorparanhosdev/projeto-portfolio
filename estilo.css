@@ -11,7 +11,7 @@ body{
 
     font-size: 1.6rem;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(180deg, rgb(59, 59, 59), rgb(83, 25, 25));
+    background: linear-gradient(180deg, black, rgb(15, 16, 31));
     height: 100vh;
 }
 
@@ -39,14 +39,17 @@ a {
 
 .menu-hamburguer {
    cursor: pointer;
-   width: 3rem;
-  
+   width: 3.2rem;
+}
+.one {
+    margin-top: 0.8rem;
 }
 .one, .two, .three {
     height: 0.2rem;
     width: 100%;
     background-color: black;
-    margin: 0.6rem auto;
+    margin-bottom: 0.8rem;
+    transition: transform 0.4s;
 }
 
 .menu-mobile.show .menu-hamburguer .two{
@@ -54,11 +57,11 @@ a {
    
 }
 .menu-mobile.show .menu-hamburguer .one{
-    transform: rotate(45deg) translate(11px, 0px);
+    transform: rotate(-45deg) translate(-15px, 14px);
     background-color: white;
 }
 .menu-mobile.show .menu-hamburguer .three{
-    transform: rotate(-45deg) translate(11px, 0px);
+    transform: rotate(45deg) translate(0px, 0px);
     background-color: white;
   
     
@@ -71,7 +74,7 @@ a {
 .menu-mobile.show .menu-toggle {
     display: block;
     position: fixed;
-    background: linear-gradient(0deg, rgb(39, 39, 223), rgb(15, 1, 75));
+    background: linear-gradient(0deg, rgb(15, 16, 31), black);
     top: 0;
     left: 0;
     height: 100vh;
@@ -102,7 +105,7 @@ a {
     bottom: 0;
     height: 2px;
     width: 0%;
-    border-bottom: 2px solid yellow;
+    background-color:yellow;
     transition: width 0.4s;
 }
 .menu-mobile.show .menu-toggle ul li a:hover::after {
