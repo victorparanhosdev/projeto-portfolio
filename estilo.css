@@ -1,43 +1,15 @@
+/* ================= RESET ================ */
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
 html{
     font-size: 62.5%;
 }
 
-:root {
-    --altura-do-header: 7.2rem
-}
-
-body{
-
-    font-size: 1.6rem;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(180deg,rgb(6, 6, 66), black);
-    height: 100vh;
-}
-
-header { 
-    background-color: rgba(0, 0, 0, 0.35);
-    border-bottom: 0.1rem solid rgba(255, 255, 255, 0.275);
-}
-.container {
-    margin: 0 2rem;
-    padding: 1rem;
-
-}
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: var(--altura-do-header);
-    
-   
-    
-
-}
 ul {
     list-style: none;
 }
@@ -46,6 +18,65 @@ a {
     text-decoration: none;
     color: black;
 }
+
+/* ================= VARIAVEL ================ */
+:root {
+    --altura-do-header: 7.2rem
+}
+
+.container {
+    margin: 0 2rem;
+    padding: 1rem;
+
+}
+.titulo {
+    font-size: 3.5rem;
+    font-weight: 300;
+    text-align: center;
+}
+.nome {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.button {
+    color: white;
+    background: rgba(0, 0, 255, 0.397);
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    display: inline-block;
+    margin: 2rem;
+   
+
+
+}
+
+/* ================= CORPO ================ */
+body{
+
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(180deg,rgb(6, 6, 66), black);
+    height: 100vh;
+    color: white;
+}
+
+/* ================= CABEÇALHO ================ */
+
+header { 
+    background-color: rgba(0, 0, 0, 0.35);
+    border-bottom: 0.1rem solid rgba(255, 255, 255, 0.275);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--altura-do-header); 
+
+}
+
+/* ================= LOGO MARCA ================ */
 .paranhos {
     font-size: 2rem;
     color: rgb(204, 204, 204);
@@ -59,6 +90,7 @@ a {
     font-size: 2rem;
 }
 
+/* ================= MENU MOBILE ================ */
 .menu-hamburguer {
    cursor: pointer;
    width: 3.2rem;
@@ -72,10 +104,11 @@ a {
     width: 100%;
     background-color: rgb(255, 255, 255);
     margin-bottom: 0.8rem;
-    transition: transform 0.3s;
+    transition: transform 0.2s;
 }
-
-
+.menu-mobile.show .menu-hamburguer {
+  
+}
 .menu-mobile.show .menu-hamburguer .one{
     transform: rotate(-45deg) translate(-7px, 7px);
    
@@ -89,25 +122,31 @@ a {
 }
 
 .menu-toggle {
-    display: none;
-    
-}
-.menu-mobile.show .menu-toggle {
-    display: block;
+    opacity: 0;
+    visibility: hidden;
     position: fixed;
     background: linear-gradient(180deg, rgb(15, 16, 31), rgb(0, 0, 0));
-    top: 0;
+    top: -30rem;
     left: 0;
     height: 100vh;
     width: 100vw;
+    transition: top 0.3s;
+    z-index: 0;
+}
+    
+.menu-mobile.show .menu-toggle {
+    opacity: 1;
+    visibility: visible;
+    top: 0;   
 }
 
-.menu-mobile.show .menu-toggle ul {
-  display: grid;
-  place-content: center;
-  margin-top: var(--altura-do-header);
-  
+.menu-mobile.show .menu-toggle ul{
+    display: grid;
+    place-content: center;
+    margin-top: var(--altura-do-header);
+
 }
+  
 .menu-mobile.show .menu-toggle ul li {
     text-align: center;
     margin: 1.5rem;    
@@ -119,6 +158,7 @@ a {
     position: relative; 
     
 }
+
 .menu-mobile.show .menu-toggle ul li a::after {
     content: '';
     position: absolute;
@@ -131,4 +171,15 @@ a {
 }
 .menu-mobile.show .menu-toggle ul li a:hover::after {
     width: 100%;    
+}
+
+/* ================= CONTEUDO ================ */
+
+#sobre {
+    margin-top: 9rem;
+    text-align: center;
+    width: 100%;
+    
+    
+    
 }
