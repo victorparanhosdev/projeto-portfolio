@@ -9,3 +9,11 @@ menuHamburguer.addEventListener('click', ()=> {
     
 })
 
+const menuShow = document.querySelector(".menu-toggle ul li")
+menuShow.addEventListener('click', ()=> {
+    for(let a of menu) {
+        a.classList.remove('show')
+    }
+})
+
+console.log(menuShow)
