@@ -13,10 +13,10 @@ menuHamburguer.addEventListener('click', ()=> {
 
 })
 
-for (const link of menuShow){
-    
+for (const link of menuShow){  
     link.addEventListener('click', ()=> {
       menumobile.classList.remove('show')
+     
     })
 }
 
