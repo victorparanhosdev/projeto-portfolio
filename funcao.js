@@ -1,27 +1,22 @@
 const menu = document.querySelectorAll(".menu-mobile")
+const menumobile = document.querySelector(".menu-mobile")
 const menuHamburguer = document.querySelector(".menu-hamburguer")
+const menuShow = document.querySelectorAll('.menu-toggle ul li a')
+
+
 
 menuHamburguer.addEventListener('click', ()=> {
-    
-    for(let element of menu){
+    for(const element of menu){
     element.classList.toggle('show')
-    }
     
-})
-
-
-
-
-const menuShow = document.querySelectorAll('menu.menu-toggle ul li')
-index = 0
-const menuLi = menuShow[index]
-
-
-
-menuLi.addEventListener('click', ()=> {
-   
-
+    }
 
 })
 
-console.log(menuLi)
+for (const link of menuShow){
+    
+    link.addEventListener('click', ()=> {
+      menumobile.classList.remove('show')
+    })
+}
+
